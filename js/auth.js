@@ -1,5 +1,3 @@
-alert("auth.js loaded");
-
 import { auth, db } from "./firebase.js";
 
 import {
@@ -11,6 +9,8 @@ import {
   doc,
   setDoc
 } from "https://www.gstatic.com/firebasejs/12.15.0/firebase-firestore.js";
+
+console.log("auth.js loaded");
 
 // REGISTER
 const registerBtn = document.getElementById("registerBtn");
@@ -34,9 +34,7 @@ if (registerBtn) {
     }
 
     try {
-
-      const userCredential =
-        await createUserWithEmailAndPassword(auth, email, password);
+      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
 
       await setDoc(doc(db, "users", userCredential.user.uid), {
         fullname,
@@ -46,7 +44,6 @@ if (registerBtn) {
       });
 
       alert("Account created successfully!");
-
       window.location.href = "login.html";
 
     } catch (error) {
@@ -60,7 +57,6 @@ if (registerBtn) {
 const loginBtn = document.getElementById("loginBtn");
 
 if (loginBtn) {
-
   loginBtn.addEventListener("click", async () => {
 
     const email = document.getElementById("email").value.trim();
@@ -72,15 +68,11 @@ if (loginBtn) {
     }
 
     try {
-
       await signInWithEmailAndPassword(auth, email, password);
-
       window.location.href = "dashboard.html";
-
     } catch (error) {
       alert(error.message);
     }
 
   });
-
 }
