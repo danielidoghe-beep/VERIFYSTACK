@@ -1,91 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VERIFYSTACK - Register</title>
 
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-}
+<title>VERIFYSTACK | Register</title>
 
-body{
-background:#08131f;
-display:flex;
-justify-content:center;
-align-items:center;
-height:100vh;
-color:white;
-}
-
-.container{
-width:90%;
-max-width:400px;
-background:#102235;
-padding:30px;
-border-radius:15px;
-box-shadow:0 0 20px rgba(0,0,0,.4);
-}
-
-.logo{
-text-align:center;
-font-size:30px;
-font-weight:bold;
-color:#00c2ff;
-margin-bottom:10px;
-}
-
-.subtitle{
-text-align:center;
-color:#b8c7d9;
-margin-bottom:25px;
-}
-
-input{
-width:100%;
-padding:15px;
-margin-bottom:15px;
-background:#162c42;
-border:none;
-border-radius:10px;
-color:white;
-font-size:16px;
-}
-
-input::placeholder{
-color:#9fb4c7;
-}
-
-button{
-width:100%;
-padding:15px;
-border:none;
-border-radius:10px;
-background:#00c2ff;
-color:white;
-font-size:17px;
-font-weight:bold;
-cursor:pointer;
-}
-
-button:hover{
-background:#00a8dd;
-}
-
-.link{
-text-align:center;
-margin-top:20px;
-}
-
-.link a{
-color:#00c2ff;
-text-decoration:none;
-}
-</style>
+<link rel="stylesheet" href="css/style.css">
 
 </head>
 
@@ -98,38 +22,55 @@ VERIFYSTACK
 </div>
 
 <div class="subtitle">
-Create your account
+Create Your Secure Account
 </div>
 
 <input
+class="input"
 type="text"
 id="fullname"
 placeholder="Full Name">
 
 <input
+class="input"
 type="email"
 id="email"
 placeholder="Email Address">
 
 <input
+class="input"
 type="password"
 id="password"
 placeholder="Password">
 
 <input
+class="input"
 type="password"
 id="confirmPassword"
 placeholder="Confirm Password">
 
-<button id="registerBtn">
+<button
+class="btn"
+id="registerBtn">
 Create Account
 </button>
 
 <div class="link">
+
 Already have an account?
+
 <a href="login.html">
+
 Login
+
 </a>
+
+</div>
+
+<div class="footer">
+
+© 2026 VERIFYSTACK
+
 </div>
 
 </div>
@@ -137,4 +78,5 @@ Login
 <script type="module" src="./js/auth.js"></script>
 
 </body>
+
 </html>
